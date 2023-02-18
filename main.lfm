@@ -1,0 +1,150 @@
+object frmMain: TfrmMain
+  Left = 569
+  Height = 194
+  Top = 250
+  Width = 840
+  ClientHeight = 194
+  ClientWidth = 840
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object btnDecompress: TButton
+    Left = 184
+    Height = 35
+    Top = 144
+    Width = 125
+    AutoSize = True
+    Caption = 'Decompress'
+    OnClick = btnDecompressClick
+    TabOrder = 0
+  end
+  object btnCompress: TButton
+    Left = 368
+    Height = 35
+    Top = 144
+    Width = 106
+    AutoSize = True
+    Caption = 'Compress'
+    OnClick = btnCompressClick
+    TabOrder = 1
+  end
+  object lblMessage: TLabel
+    Left = 0
+    Height = 1
+    Top = 0
+    Width = 1
+    ParentColor = False
+    Visible = False
+  end
+  object edtInDir: TEdit
+    Left = 144
+    Height = 33
+    Top = 13
+    Width = 368
+    OnChange = edtInDirChange
+    TabOrder = 2
+  end
+  object lblInDir: TLabel
+    Left = 16
+    Height = 25
+    Top = 13
+    Width = 97
+    Caption = 'Input Folder'
+    ParentColor = False
+  end
+  object lblOutDir: TLabel
+    Left = 16
+    Height = 25
+    Top = 56
+    Width = 112
+    Caption = 'Output Folder'
+    ParentColor = False
+  end
+  object edtOutDir: TEdit
+    Left = 144
+    Height = 33
+    Top = 56
+    Width = 368
+    OnChange = edtOutDirChange
+    TabOrder = 3
+  end
+  object btnBrowseInDir: TButton
+    Left = 528
+    Height = 35
+    Top = 13
+    Width = 83
+    AutoSize = True
+    Caption = 'Browse'
+    OnClick = btnBrowseInDirClick
+    TabOrder = 4
+  end
+  object btnBrowseOutDir: TButton
+    Left = 528
+    Height = 35
+    Top = 56
+    Width = 83
+    AutoSize = True
+    Caption = 'Browse'
+    OnClick = btnBrowseOutDirClick
+    TabOrder = 5
+  end
+  object rgCompressionType: TRadioGroup
+    Left = 648
+    Height = 76
+    Top = 13
+    Width = 179
+    AutoFill = True
+    Caption = 'Compression Type'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 46
+    ClientWidth = 175
+    Columns = 2
+    Items.Strings = (
+      'DXT5'
+      'DXT1'
+    )
+    OnSelectionChanged = rgCompressionTypeSelectionChanged
+    TabOrder = 6
+  end
+  object cbMipmaps: TCheckBox
+    Left = 648
+    Height = 29
+    Top = 96
+    Width = 180
+    Caption = 'Generate mipmaps'
+    OnChange = cbMipmapsChange
+    TabOrder = 7
+  end
+  object lblStatus: TLabel
+    Left = 16
+    Height = 25
+    Top = 96
+    Width = 85
+    Caption = 'Status: idle'
+    ParentColor = False
+  end
+  object btnAbout: TButton
+    Left = 751
+    Height = 35
+    Top = 144
+    Width = 76
+    AutoSize = True
+    Caption = 'About'
+    OnClick = btnAboutClick
+    TabOrder = 8
+  end
+  object dlgSelectInDir: TSelectDirectoryDialog
+    Left = 232
+    Top = 24
+  end
+  object dlgSelectOutDir: TSelectDirectoryDialog
+    Left = 384
+    Top = 24
+  end
+end
