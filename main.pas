@@ -47,7 +47,7 @@ type
 
 const
   TITLE: string = 'RomeTexTools';
-  VERSION: string = 'v1.0.0';
+  VERSION: string = 'v1.0.1';
   AUTHOR: string = 'Vartan Haghverdi';
   COPYRIGHT: string = 'Copyright 2023';
   NOTE: string = 'Brought to you by the EB Online Team';
